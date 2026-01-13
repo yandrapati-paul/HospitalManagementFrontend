@@ -27,12 +27,12 @@ async function doctorSubmit(){
 
 
 let obj = {
-  visitDateStr: visitDateStr,
+  visitDateStr: "84-58-8056",
   diagnosis: diagnosis,
-  wtKg: Number(wtKg),
-  tempC: Number(tempC),
-  bpValue: Number(bpValue),
-  paymentType: paymentType,
+  wtKg: 0.1,
+  tempC: 35,
+  bpValue: 0.1,
+  paymentType: "string",
   pid: Number(pid),
   did: Number(did)
 };
