@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body style="background-color:#1b1a1a; color: aliceblue;">
+
+    <a href="./doctoradd.html">add new doctor</a> <br>
+    patients page: <a href="./patient.html">patients list</a> <br>  
+    visits page: <a href="./visit.html">visits list</a>
+
+
+    <div id="root" style="margin: 5%;">
+
+    </div>
+
+    <!-- <div class="card w-50 text-bg-dark mb-3 border-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header">
+    Doctor Name:${name}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Doctor id:${id}</h5>
+    <p class="card-text">emailAddress:${emailAddress} ,</p>
+    <p class="card-text">phone:${phone} ,</p>
+    <p class="card-text">gender:${gender} ,</p>
+    <p class="card-text">fieldSpeciality:${fieldSpeciality} ,</p>
+    <p class="card-text">yrsExperience:${yrsExperience} ,</p>
+    <p class="card-text">qualifications:${qualifications} ,</p>
+    <p class="card-text">monthlyPay:${monthlyPay} </p>
+    
+    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        edit doc details
+    </button>
+    <a href="#" class="btn btn-primary">delete doc</a>
+  </div>
+</div> -->
+
+<!-- <div class="card text-bg-secondary border-warning mb-3" style="width: 15rem;">
+  <div class="card-body">
+    <h5 class="card-title">patientId:${patientId}</h5>
+    <p class="card-text">diagnosis:${diagnosis}</p>
+    <p class="card-text">visit id:${visitRef}</p>
+    <p class="card-text">visit date:${visitDateStr}</p>
+    <p class="card-text">weight:${wtKg}kgs</p>
+    <p class="card-text">temperature:${tempC}C</p>
+    <p class="card-text">Blood pressure:${bpValue}</p>
+    
+  </div>
+</div>   -->
+
+    
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="doctorForm" style="margin: 10%;">
+  <!-- Name -->
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" class="form-control" name="name" required>
+  </div>
+
+  <!-- Email -->
+  <div class="mb-3">
+    <label class="form-label">Email Address</label>
+    <input type="email" class="form-control" name="emailAddress" required>
+  </div>
+
+  <!-- Phone -->
+  <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input type="text" class="form-control" name="phone" required>
+  </div>
+
+  <!-- Gender (STRING) -->
+  <div class="mb-3">
+    <label class="form-label">Gender</label>
+    <input type="text" class="form-control" name="gender" placeholder="Male / Female / Other" required>
+  </div>
+
+  <!-- Field Speciality -->
+  <div class="mb-3">
+    <label class="form-label">Field Speciality</label>
+    <input type="text" class="form-control" name="fieldSpeciality" required>
+  </div>
+
+  <!-- Years of Experience -->
+  <div class="mb-3">
+    <label class="form-label">Years of Experience</label>
+    <input type="text" class="form-control" name="yrsExperience" required>
+  </div>
+
+  <!-- Qualifications -->
+  <div class="mb-3">
+    <label class="form-label">Qualifications</label>
+    <input type="text" class="form-control" name="qualifications" required>
+  </div>
+
+  <!-- Monthly Pay -->
+  <div class="mb-3">
+    <label class="form-label">Monthly Pay</label>
+    <input type="text" class="form-control" name="monthlyPay" required>
+  </div>
+
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="post();">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script src="./doctor.js"></script>
+
+</body>
+</html>
