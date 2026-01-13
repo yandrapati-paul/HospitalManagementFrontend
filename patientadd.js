@@ -2,7 +2,7 @@
 async function patientSubmit(){
 
 
-    let newapi='https://d1dgqwnu0ivu2l.cloudfront.net/patients';
+    let newapi='https://d21l0eb0ukfkg3.cloudfront.net/patients';
 
     let name=document.getElementsByName("name")[0].value;
     let emailAddress=document.getElementsByName("emailAddress")[0].value;
@@ -13,11 +13,14 @@ async function patientSubmit(){
     let day = today.getDate();
     let month = today.getMonth() + 1;
     let year = today.getFullYear();
-    let formattedDate = `${day}-${month}-${year}`;
+    let formattedDate = `${String(day).padStart(2,"0")}-${String(month).padStart(2,"0")}-${year}`;
+
+
 
     let registrationDateStr=formattedDate;
 
-    let patientAge=document.getElementsByName("patientAge")[0].value;
+    let patientAge = Number(document.getElementsByName("patientAge")[0].value);
+
 
     console.log(name);
 
@@ -28,8 +31,7 @@ async function patientSubmit(){
       gender: gender,
       registrationDateStr:registrationDateStr,
       patientAge:patientAge,
-      encounterIds: [
-      ]
+      encounterIds: [1]
     }
 
     let modalElem=document.getElementById("exampleModalLabel");
